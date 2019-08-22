@@ -1,0 +1,98 @@
+%page-control{
+  position: absolute;
+  bottom: -30px;
+  width: 100%;
+}
+.bx-wrapper {
+  position: absolute;
+  right: percentage(14/1170);
+  top: 50%;
+  margin-top: -123px !important;
+  .bx-viewport {
+    -webkit-transform: translatez(0);
+    -moz-transform: translatez(0);
+    -ms-transform: translatez(0);
+    -o-transform: translatez(0);
+    transform: translatez(0);
+  }
+  .bx-pager{
+    @extend %page-control;
+    text-align: center;
+    font-size: .85em;
+    font-family: Arial;
+    font-weight: bold;
+    color: #666;
+    padding-top: 20px;
+    .bx-pager-item{
+      display: inline-block;
+    }
+    &.bx-default-pager{
+      a {
+        background: #666;
+        text-indent: -9999px;
+        display: block;
+        width: 10px;
+        height: 10px;
+        margin: 0 5px;
+        outline: 0;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+      }
+    }
+  }
+  .bx-loading {
+    min-height: 50px;
+    background: url(../images/loader.gif) center center no-repeat #fff;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+  }
+  .bx-controls-direction {
+    a {
+      display: block;
+      text-indent: -9090px;
+      width: 16px;
+      height: 18px;
+      position: absolute;
+      left: 50%;
+      margin-left: -8px;
+      z-index: 9999;
+      &.bx-prev{
+        top: -32px;
+        @include sprite(-96px 0);
+        &:hover {
+          background-position: -96px -32px;
+        }
+      }
+      &.bx-next {
+        bottom: -32px;
+        @include sprite(-64px -96px);
+        &:hover {
+          background-position: -64px -64px;
+        }
+      }
+      &.disabled {
+        display: none;
+      }
+    }
+  }
+  .bx-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #666\9;
+    background: rgba(80, 80, 80, 0.75);
+    width: 100%;
+    span {
+      color: #fff;
+      font-family: Arial;
+      display: block;
+      font-size: .85em;
+      padding: 10px;
+    }
+  }
+}

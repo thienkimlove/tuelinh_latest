@@ -1,0 +1,94 @@
+@extends('frontend')
+@section('content')
+    <section data-position="true" class="box-news" id="box-news">
+        <div class="fix">
+            <div class="layout">
+                <div class="layout-left">
+                    <ul class="breadCrumb clearFix">
+                        <li><a href="{{url('/')}}">{{trans('common.home_cate')}}</a></li>
+                        <li><a href="{{ ($post->category->parent_id && $post->category->parent_id != $post->category->id) ? url($post->category->parent->slug.'/'.$post->category->slug) : url($post->category->slug)}}">{{$post->category->title}}</a></li>
+                        <li class="active">{{$post->title}}</li>
+                    </ul>
+
+                    <article class="detail" id="data-detail">
+                        <h1 class="title">{{$post->title}}</h1>
+                        <div class="data">
+                            {!! $post->content !!}
+                        </div>
+
+                        <div class="box-tags">
+                            <span>{{trans('common.chude_tieu_de')}}</span>
+                            @foreach ($post->tags as $tag)
+                            <a href="{{url('tag', $tag->slug)}}" title="{{$tag->title}}">{{$tag->title}}</a>
+                            @endforeach
+                        </div><!--//box-tags-->
+                                    <div class="comment-post">
+                                     <div class="addthis_native_toolbox"></div>									 
+                                    </div>
+                    <div class="comment-post">
+                        <div class="fb-comments" data-href="{{url(str_slug($post->title.' '.$post->id))}}" data-numposts="5"></div>
+                    </div>
+                        <div class="social-follow">
+
+                                <div class="released-post">
+                                    <h3>{{trans('common.rightlienquan_tieu_de')}}</h3>
+                                    <ul class="list-released">
+                                        @foreach ($relatePosts as $relatedPost)
+                                            <li><a href="{{url(str_slug($relatedPost->title.' '.$relatedPost->id))}}">{{$relatedPost->title}}</a></li>
+                                        @endforeach
+
+                                        @if ($additionPost)
+                                        @foreach ($additionPost as $addition)
+                                            <li><a href="{{url(str_slug($addition->title.' '.$addition->id))}}">{{$addition->title}}</a></li>
+                                        @endforeach
+                                        @endif
+                                    </ul>
+
+                                    @foreach ($post->tags as $tag)
+                                        @if ($tag->banner_image)
+                                            <div class="box-adv-center">
+                                                <div class="data">
+                                                    <div class="item full">
+                                                        <p>
+                                                            <a href="{{$tag->banner_link}}">
+                                                                <img src="{{url('files/images/'.$tag->banner_image)}}" />
+                                                            </a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="clear"></div>
+                                            </div>
+                                        @endif
+                                    @endforeach
+									
+<div id="fb-root"></div>
+ <div class="box-form">
+                <div class="clear"></div>
+            </div>
+                                </div>
+                        </div>
+                    </article>
+                </div>
+                @include('frontend.post_detail_right_menu', ['rightRelateds' => $rightRelateds])
+</div>
+
+<!-- Google Code -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 964027423;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/964027423/?value=0&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+</div>
+@include('frontend.foot-slide')
+</section><!--//box-solution-->
+@endsection

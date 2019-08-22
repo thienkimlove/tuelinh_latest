@@ -1,0 +1,50 @@
+%data-scroll{
+  .viewport{
+    height: 204px;
+    overflow: hidden;
+    position: relative;
+  }
+  .overview{
+    list-style: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+  .scrollbar{
+    position: absolute;
+    right: -1px;
+    top: 8px;
+    width: 10px;
+  }
+  .track{
+    width: 10px;
+    height: 100%;
+    background: #eae1cf;
+    @include border-radius(10px);
+    position: relative;
+    behavior: url(../../PIE.htc);
+  }
+  .thumb{
+    height: 47px;
+    cursor: pointer;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #9f8978;
+    @include border-radius(10px);
+    behavior: url(../../PIE.htc);
+    .end{
+      overflow:hidden;
+      height: 47px;
+      width: 10px;
+    }
+  }
+  .disable{
+    display:none;
+  }
+  .noSelect{
+   @extend %no-select;
+  }
+}
