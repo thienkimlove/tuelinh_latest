@@ -4,39 +4,39 @@
 <section class="box-slide" id="box-slide" data-set="space-slider" data-fix="header">
     <div class="owl-carousel" id="slide-home">
         @if (App::getLocale() == 'vi')
-            <div class="item"><a href="http://tuelinh.vn/gioi-thieu"><img src="{{url('images/example/banner-1356x658-2.png')}}" alt="" width="1356" height="658" border="0"/></a><a class="over" href="" title=""></a>            </div>
+            <div class="item"><a href="http://tuelinh.vn/lich-su-hinh-thanh"><img src="{{url('images/example/banner-1356x658-2.png')}}" alt="" width="1356" height="658" border="0"/></a><a class="over" href="" title=""></a>            </div>
             <div class="item">
-                <a href="http://tuelinh.vn/gioi-thieu"><img src="{{url('images/example/banner-1356x658-3.png')}}" alt="" width="1356" height="658" border="0"/></a>
+                <a href="http://tuelinh.vn/lich-su-hinh-thanh"><img src="{{url('images/example/banner-1356x658-3.png')}}" alt="" width="1356" height="658" border="0"/></a>
                 <a class="over" href="" title=""></a>
             </div>
             <div class="item">
-                <a href="http://tuelinh.vn/gioi-thieu"><img src="{{url('images/example/banner-1356x658-1.png')}}" alt="" width="1356" height="658" border="0"/></a>
+                <a href="http://tuelinh.vn/lich-su-hinh-thanh"><img src="{{url('images/example/banner-1356x658-1.png')}}" alt="" width="1356" height="658" border="0"/></a>
                 <a class="over" href="" title=""></a>
             </div>
         @elseif (App::getLocale() == 'en')
             <div class="item">
-                <a href="http://tuelinh.vn/gioi-thieu"><img src="{{url('images/example/banner-1356x658-2.png')}}" alt="" width="1356" height="658" border="0"/></a>
+                <a href="http://tuelinh.vn/lich-su-hinh-thanh"><img src="{{url('images/example/banner-1356x658-2.png')}}" alt="" width="1356" height="658" border="0"/></a>
                 <a class="over" href="" title=""></a>
             </div>
             <div class="item">
-                <a href="http://tuelinh.vn/gioi-thieu"><img src="{{url('images/example/banner-1356x658-2.png')}}" alt="" width="1356" height="658" border="0"/></a>
+                <a href="http://tuelinh.vn/lich-su-hinh-thanh"><img src="{{url('images/example/banner-1356x658-2.png')}}" alt="" width="1356" height="658" border="0"/></a>
                 <a class="over" href="" title=""></a>
             </div>
             <div class="item">
-                <a href="http://tuelinh.vn/gioi-thieu"><img src="{{url('images/example/banner-1356x658-2.png')}}" alt="" width="1356" height="658" border="0"/></a>
+                <a href="http://tuelinh.vn/lich-su-hinh-thanh"><img src="{{url('images/example/banner-1356x658-2.png')}}" alt="" width="1356" height="658" border="0"/></a>
                 <a class="over" href="" title=""></a>
             </div>
         @else
             <div class="item">
-                <a href="http://tuelinh.vn/gioi-thieu"><img src="{{url('images/example/banner-1356x658-2.png')}}" alt="" width="1356" height="658" border="0"/></a>
+                <a href="http://tuelinh.vn/lich-su-hinh-thanh"><img src="{{url('images/example/banner-1356x658-2.png')}}" alt="" width="1356" height="658" border="0"/></a>
                 <a class="over" href="" title=""></a>
             </div>
             <div class="item">
-                <a href="http://tuelinh.vn/gioi-thieu"><img src="{{url('images/example/banner-1356x658-2.png')}}" alt="" width="1356" height="658" border="0"/></a>
+                <a href="http://tuelinh.vn/lich-su-hinh-thanh"><img src="{{url('images/example/banner-1356x658-2.png')}}" alt="" width="1356" height="658" border="0"/></a>
                 <a class="over" href="" title=""></a>
             </div>
             <div class="item">
-                <a href="http://tuelinh.vn/gioi-thieu"><img src="{{url('images/example/banner-1356x658-2.png')}}" alt="" width="1356" height="658" border="0"/></a>
+                <a href="http://tuelinh.vn/lich-su-hinh-thanh"><img src="{{url('images/example/banner-1356x658-2.png')}}" alt="" width="1356" height="658" border="0"/></a>
                 <a class="over" href="" title=""></a>
             </div>
         @endif

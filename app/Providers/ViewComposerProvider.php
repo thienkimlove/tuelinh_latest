@@ -62,6 +62,23 @@ class ViewComposerProvider extends ServiceProvider
 
         });
 
+        view()->composer('frontend.menu_right', function ($view) {
+            $locales = [
+                'en' => 'English',
+                'vi' => 'Tiếng Việt',
+                'fr' => 'French'
+            ];
+
+            $current = App::getLocale();
+            $footerCates = Category::all();
+            $ars = [];
+            foreach ($footerCates as $cate) {
+                $ars[$cate->slug] = $cate->title;
+            }
+            $view->with(['locales' => $locales, 'current' => $current, 'cates' => $ars]);
+
+        });
+
         view()->composer('frontend.foot-slide', function ($view) {
             $slidePosts = Post::whereHas('modules', function($q){
                 $q->where('slug', 'footer-san-pham')->orderBy('order');

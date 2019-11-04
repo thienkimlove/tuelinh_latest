@@ -18,20 +18,22 @@
                     <a href="#" title="">Tuệ Linh</a>
                     <ul>
                         <li>
-                            <a href="{{url('gioi-thieu')}}" title="">Giới thiệu</a>
+                            <a href="{{url('lich-su-hinh-thanh')}}" title="">{{trans('common.recommend_cate')}}</a>
                         </li>
                         <li>
-                            <a href="{{url('tin-tuc')}}" title="">Tin tức</a>
+                            <a href="{{url('tam-nhin-su-menh')}}" title="">{{$cates['tam-nhin-su-menh']}}</a>
                         </li>
                         <li>
-                            <a href="{{url('tin-tuc/tu-thien')}}" title="">Hoạt động từ thiện</a>
+                            <a href="{{url('thanh-tuu')}}" title="">Thành tựu</a>
                         </li>
-                        <li>
-                            <a href="{{url('tin-tuc/tin-tuyen-dung')}}" title="">Tuyển dụng</a>
-                        </li>
-                        <li class="last">
-                            <a href="{{url('tin-tuc/thu-vien')}}" title="">Thư viện</a>
-                        </li>
+                        @if ($current == 'vi')
+                            <li>
+                                <a href="{{url('tam-nhin-su-menh/tuyen-dung')}}" title="">{{$cates['tuyen-dung']}}</a>
+                            </li>
+                            <li class="last">
+                                <a href="{{url('tam-nhin-su-menh/hoat-dong-doanh-nghiep')}}" title="">{{$cates['hoat-dong-doanh-nghiep']}}</a>
+                            </li>
+                        @endif
                     </ul>
                 </li>
                 <li>
